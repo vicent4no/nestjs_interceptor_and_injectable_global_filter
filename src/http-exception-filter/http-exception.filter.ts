@@ -17,6 +17,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     const ctx = host.switchToHttp();
     const response = ctx.getResponse<Response>();
-    response.json({ message: 'friendly message' });
+    response.json({ message: 'friendly message, covered http exception' });
   }
 }
