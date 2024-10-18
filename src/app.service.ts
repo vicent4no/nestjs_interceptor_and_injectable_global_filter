@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World!';
+    throw new UnprocessableEntityException('Oh noes, something happened!');
   }
 }
